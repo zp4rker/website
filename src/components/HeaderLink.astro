@@ -15,13 +15,19 @@ const isActive = href === pathname || href === pathname.replace(/\/$/, '');
 
 <style>
 a {
-	@apply text-accent;
+	@apply text-accent transition;
 }
-a:hover {
-	text-decoration: underline;
-}
+
 a:after {
 	content: "/";
 	@apply text-accent-2 -ml-2 mr-1;
+}
+
+a:hover {
+	@apply text-accent-3;
+}
+
+a.active {
+	@apply font-bold hover:text-accent;
 }
 </style>

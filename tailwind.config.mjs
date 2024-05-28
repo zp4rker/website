@@ -13,6 +13,7 @@ export default {
 				link: "var(--theme-link)",
 				accent: "var(--theme-accent)",
 				"accent-2": "var(--theme-accent-2)",
+				"accent-3": "var(--theme-accent-3)",
 				surface: "var(--theme-surface)",
 				quote: "var(--theme-quote)",
 				highlight: "var(--theme-highlight)"
