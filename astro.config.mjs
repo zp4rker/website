@@ -2,8 +2,9 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import { remarkReadingTime } from './src/utils/remark-reading-time.mjs';
-
 import tailwind from "@astrojs/tailwind";
+
+import node from "@astrojs/node";
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,10 +17,12 @@ export default defineConfig({
       // https://docs.astro.build/en/guides/markdown-content/#syntax-highlighting
       themes: {
         light: 'catppuccin-mocha',
-        dark: 'catppuccin-latte',
-      },
+        dark: 'catppuccin-latte'
+      }
     }
   },
+  output: "hybrid",
+  adapter: node({
+    mode: "standalone"
+  })
 });
-
-
