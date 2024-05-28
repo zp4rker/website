@@ -1,5 +1,6 @@
 ---
 import { NAV_LINKS, siteConfig } from '../consts.ts';
+import ThemeToggle from '../components/ThemeToggle.astro';
 const year = new Date().getFullYear();
 ---
 
@@ -11,20 +12,6 @@ const year = new Date().getFullYear();
 		Copyright &copy; {year}{" "}
 		{siteConfig.profile.author}
 	</div>
-	<nav
-		aria-label="More on this site"
-		class="gap-x-0 sm:gap-x-2 sm:flex sm:divide-x sm:divide-accent"
-	>
-		{
-			NAV_LINKS.map((link) => (
-				<a
-					href={link.path}
-					class="px-2 py-0 hover:text-textColor hover:underline sm:px-4 sm:py-2"
-				>
-					{link.title}
-				</a>
-			))
-		}
-	</nav>
+	<ThemeToggle />
 </footer>
 

@@ -1,7 +1,6 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import { siteConfig, NAV_LINKS } from '../consts';
-import ThemeToggle from '../components/ThemeToggle.astro';
 
 const url = new URL(Astro.request.url);
 ---
@@ -12,7 +11,7 @@ const url = new URL(Astro.request.url);
 			class="title whitespace-nowrap" 
 			href="/"
 			aria-current={url.pathname === "/" ? "page" : false}
-		>{siteConfig.title}</a>
+		>{siteConfig.displayTitle}</a>
 	</div>
 
 	<nav 
@@ -48,7 +47,7 @@ const url = new URL(Astro.request.url);
 	</nav>
 
 	<div class="flex gap-2 items-center justify-center">
-		<ThemeToggle/>
+		<p class="whitespace-nowrap">by zp4rker</p>
 
 		<nav-button>
 			<div class="sm:hidden">

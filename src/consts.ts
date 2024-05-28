@@ -3,6 +3,7 @@
 
 type Config = {
   title: string;
+  displayTitle: string;
   description: string;
   lang: string;
   profile: {
@@ -19,6 +20,7 @@ type SocialLink = {
 
 export const siteConfig: Config = {
   title: "zp4rker's stuff",
+  displayTitle: "my stuff",
   description: "the home of my thoughts and works",
   lang: "en-GB",
   profile: {
