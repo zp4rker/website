@@ -37,17 +37,17 @@ export const siteConfig: Config = {
 export const socialLinks: Array<SocialLink> = [
   {
     icon: "cib:matrix",
-    friendlyName: "Matrix",
+    friendlyName: "Matrix (@zp4rker:wasitiyyah.com)",
     link: "https://matrix.to/#/@zp4rker:wasitiyyah.com",
   },
   {
     icon: "mdi:github",
-    friendlyName: "Github",
+    friendlyName: "Github (@zp4rker)",
     link: "https://github.com/zp4rker",
   },
   {
     icon: "mdi:email",
-    friendlyName: "email",
+    friendlyName: "Email (iam@zp4rker.com)",
     link: "mailto:iam@zp4rker.com",
   },
 ];
