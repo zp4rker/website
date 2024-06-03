@@ -14,6 +14,11 @@ const url = new URL(Astro.request.url);
 		>{siteConfig.displayTitle}</a>
 	</div>
 
+	<span class="flex items-center gap-x-2 sm:hidden">
+		<p class="whitespace-nowrap">by</p>
+		<img class="h-10 w-10 rounded-full mr-2" src="/logo-500.png">
+	</span>
+
 	<nav 
 		class="mt-4 bg-surface/95 sm:bg-bgColor absolute hidden top-8 w-full sm:block sm:static sm:mt-0 group-[.menu-open]:z-50 group-[.menu-open]:flex group-[.menu-open]:bg-bgColor" 
 		id="navigation-menu" 
@@ -47,7 +52,10 @@ const url = new URL(Astro.request.url);
 	</nav>
 
 	<div class="flex gap-2 items-center justify-center">
-		<p class="whitespace-nowrap">by zp4rker</p>
+		<span class="hidden sm:flex items-center gap-x-2">
+			<p class="whitespace-nowrap">by</p>
+			<img class="h-10 w-10 rounded-full mr-2" src="/logo-500.png">
+		</span>
 
 		<nav-button>
 			<div class="sm:hidden">
@@ -67,7 +75,7 @@ const url = new URL(Astro.request.url);
 					</svg>
 
 					<!-- icon when menu is open -->
-					<svg class="transform transition-all duration-150 ease-out h-6 w-6 scale-0 text-accent opacity-0 transition-all group-aria-expanded:scale-100 group-aria-expanded:opacity-100 hidden group-aria-expanded:block" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+					<svg class="transform duration-150 ease-out h-6 w-6 scale-0 text-accent opacity-0 transition-all group-aria-expanded:scale-100 group-aria-expanded:opacity-100 hidden group-aria-expanded:block" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
 						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
 					</svg>
 				</button>
