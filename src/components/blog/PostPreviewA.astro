@@ -18,7 +18,7 @@ const urlBasePath = post.collection === "project" ? "projects" : post.collection
 <li>
 	<span>
 		<a href={`/${urlBasePath}/${post.slug}/`} class="post-item">
-			<h4 class="cody-link inline font-bold" >{post.data.title}</h4>
+			<h4 class="cody-link inline-block font-bold mt-2" >{post.data.title}</h4>
 		</a>
 		{ pinned &&
 			<Icon 
@@ -29,14 +29,17 @@ const urlBasePath = post.collection === "project" ? "projects" : post.collection
 			/>
 		}
 	</span>
-	<p class="date pr-2 mt-1">
+	<p class="detail date pr-2 -ml-2 text-accent-2">
 		<FormattedDate date={postDate}/>
 	</p>
-	{withDesc && ( <p class="italic">{post.data.description}</p> )}
+	{withDesc && ( <p class="detail -mb-2">{post.data.description}</p> )}
 </li>
 <style>
 	.post-item:before {
-		content: "#";
+		content: "##";
 		@apply text-accent-2;
-	}	
+	}
+	.detail:before {
+		content: "\00a0\00a0\00a0"
+	}
 </style>
