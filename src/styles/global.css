@@ -155,7 +155,7 @@
   }
 
   .cody-bg {
-    @apply p-4 bg-surface;
+    @apply p-6 bg-surface;
   }
 
   .cody-copy-code {
